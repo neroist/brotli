@@ -1,3 +1,5 @@
+*_linkerArgs.txt
+
 *.dynlib
 *.exe
 *.dll

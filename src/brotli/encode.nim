@@ -17,8 +17,8 @@ else:
   const currentSourceDir = currentSourcePath.parentDir()
 
   {.passC: "-I" & currentSourceDir / "csrc/include".}
-  {.compile: (currentSourceDir / "csrc/common/*.c", "$#.o").}
-  {.compile: (currentSourceDir / "csrc/enc/*.c", "$#.o").}
+  {.compile: ("./csrc/common/*.c", "$#.o").}
+  {.compile: ("./csrc/enc/*.c", "$#.o").}
 
   {.pragma: brotliEnc.}
 
