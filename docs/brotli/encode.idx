@@ -1,0 +1,49 @@
+nimTitle	encode	brotli/encode.html	module src/brotli/encode		0
+nim	useBrotliEncDll	brotli/encode.html#useBrotliEncDll	const useBrotliEncDll		5
+nim	BROTLI_MIN_WINDOW_BITS	brotli/encode.html#BROTLI_MIN_WINDOW_BITS	const BROTLI_MIN_WINDOW_BITS		29
+nim	BROTLI_MAX_WINDOW_BITS	brotli/encode.html#BROTLI_MAX_WINDOW_BITS	const BROTLI_MAX_WINDOW_BITS		32
+nim	BROTLI_LARGE_MAX_WINDOW_BITS	brotli/encode.html#BROTLI_LARGE_MAX_WINDOW_BITS	const BROTLI_LARGE_MAX_WINDOW_BITS		39
+nim	BROTLI_MIN_INPUT_BLOCK_BITS	brotli/encode.html#BROTLI_MIN_INPUT_BLOCK_BITS	const BROTLI_MIN_INPUT_BLOCK_BITS		45
+nim	BROTLI_MAX_INPUT_BLOCK_BITS	brotli/encode.html#BROTLI_MAX_INPUT_BLOCK_BITS	const BROTLI_MAX_INPUT_BLOCK_BITS		48
+nim	BROTLI_MIN_QUALITY	brotli/encode.html#BROTLI_MIN_QUALITY	const BROTLI_MIN_QUALITY		51
+nim	BROTLI_MAX_QUALITY	brotli/encode.html#BROTLI_MAX_QUALITY	const BROTLI_MAX_QUALITY		54
+nim	BrotliModeGeneric	brotli/encode.html#BrotliModeGeneric	BrotliEncoderMode.BrotliModeGeneric		58
+nim	BrotliModeText	brotli/encode.html#BrotliModeText	BrotliEncoderMode.BrotliModeText		58
+nim	BrotliModeFont	brotli/encode.html#BrotliModeFont	BrotliEncoderMode.BrotliModeFont		58
+nim	BrotliEncoderMode	brotli/encode.html#BrotliEncoderMode	enum BrotliEncoderMode		58
+nim	BROTLI_DEFAULT_QUALITY	brotli/encode.html#BROTLI_DEFAULT_QUALITY	const BROTLI_DEFAULT_QUALITY		76
+nim	BROTLI_DEFAULT_WINDOW	brotli/encode.html#BROTLI_DEFAULT_WINDOW	const BROTLI_DEFAULT_WINDOW		79
+nim	BROTLI_DEFAULT_MODE	brotli/encode.html#BROTLI_DEFAULT_MODE	const BROTLI_DEFAULT_MODE		82
+nim	BROTLI_OPERATION_PROCESS	brotli/encode.html#BROTLI_OPERATION_PROCESS	BrotliEncoderOperation.BROTLI_OPERATION_PROCESS		86
+nim	BROTLI_OPERATION_FLUSH	brotli/encode.html#BROTLI_OPERATION_FLUSH	BrotliEncoderOperation.BROTLI_OPERATION_FLUSH		86
+nim	BROTLI_OPERATION_FINISH	brotli/encode.html#BROTLI_OPERATION_FINISH	BrotliEncoderOperation.BROTLI_OPERATION_FINISH		86
+nim	BROTLI_OPERATION_EMIT_METADATA	brotli/encode.html#BROTLI_OPERATION_EMIT_METADATA	BrotliEncoderOperation.BROTLI_OPERATION_EMIT_METADATA		86
+nim	BrotliEncoderOperation	brotli/encode.html#BrotliEncoderOperation	enum BrotliEncoderOperation		86
+nim	BROTLI_PARAM_MODE	brotli/encode.html#BROTLI_PARAM_MODE	BrotliEncoderParameter.BROTLI_PARAM_MODE		156
+nim	BROTLI_PARAM_QUALITY	brotli/encode.html#BROTLI_PARAM_QUALITY	BrotliEncoderParameter.BROTLI_PARAM_QUALITY		156
+nim	BROTLI_PARAM_LGWIN	brotli/encode.html#BROTLI_PARAM_LGWIN	BrotliEncoderParameter.BROTLI_PARAM_LGWIN		156
+nim	BROTLI_PARAM_LGBLOCK	brotli/encode.html#BROTLI_PARAM_LGBLOCK	BrotliEncoderParameter.BROTLI_PARAM_LGBLOCK		156
+nim	BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING	brotli/encode.html#BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING	BrotliEncoderParameter.BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING		156
+nim	BROTLI_PARAM_SIZE_HINT	brotli/encode.html#BROTLI_PARAM_SIZE_HINT	BrotliEncoderParameter.BROTLI_PARAM_SIZE_HINT		156
+nim	BROTLI_PARAM_LARGE_WINDOW	brotli/encode.html#BROTLI_PARAM_LARGE_WINDOW	BrotliEncoderParameter.BROTLI_PARAM_LARGE_WINDOW		156
+nim	BROTLI_PARAM_NPOSTFIX	brotli/encode.html#BROTLI_PARAM_NPOSTFIX	BrotliEncoderParameter.BROTLI_PARAM_NPOSTFIX		156
+nim	BROTLI_PARAM_NDIRECT	brotli/encode.html#BROTLI_PARAM_NDIRECT	BrotliEncoderParameter.BROTLI_PARAM_NDIRECT		156
+nim	BROTLI_PARAM_STREAM_OFFSET	brotli/encode.html#BROTLI_PARAM_STREAM_OFFSET	BrotliEncoderParameter.BROTLI_PARAM_STREAM_OFFSET		156
+nim	BrotliEncoderParameter	brotli/encode.html#BrotliEncoderParameter	enum BrotliEncoderParameter		156
+nim	BrotliEncoderState	brotli/encode.html#BrotliEncoderState	object BrotliEncoderState		258
+nim	BrotliEncoderSetParameter	brotli/encode.html#BrotliEncoderSetParameter,ptr.BrotliEncoderState,BrotliEncoderParameter,uint32	proc BrotliEncoderSetParameter(state: ptr BrotliEncoderState;\n                          param: BrotliEncoderParameter; value: uint32): cint		266
+nim	BrotliEncoderCreateInstance	brotli/encode.html#BrotliEncoderCreateInstance,BrotliAllocFunc,BrotliFreeFunc,pointer	proc BrotliEncoderCreateInstance(allocFunc: BrotliAllocFunc;\n                            freeFunc: BrotliFreeFunc; opaque: pointer): ptr BrotliEncoderState		285
+nim	BrotliEncoderDestroyInstance	brotli/encode.html#BrotliEncoderDestroyInstance,ptr.BrotliEncoderState	proc BrotliEncoderDestroyInstance(state: ptr BrotliEncoderState)		303
+nim	BrotliEncoderPreparedDictionary	brotli/encode.html#BrotliEncoderPreparedDictionary	object BrotliEncoderPreparedDictionary		312
+nim	BrotliEncoderPrepareDictionary	brotli/encode.html#BrotliEncoderPrepareDictionary,BrotliSharedDictionaryType,csize_t,ptr.UncheckedArray[uint8],cint,BrotliAllocFunc,BrotliFreeFunc,pointer	proc BrotliEncoderPrepareDictionary(type: BrotliSharedDictionaryType;\n                               dataSize: csize_t;\n                               data: ptr UncheckedArray[uint8];\n                               quality: cint = BROTLI_MAX_QUALITY;\n                               allocFunc: BrotliAllocFunc;\n                               freeFunc: BrotliFreeFunc; opaque: pointer): ptr BrotliEncoderPreparedDictionary		316
+nim	BrotliEncoderDestroyPreparedDictionary	brotli/encode.html#BrotliEncoderDestroyPreparedDictionary,ptr.BrotliEncoderPreparedDictionary	proc BrotliEncoderDestroyPreparedDictionary(dictionary: ptr BrotliEncoderPreparedDictionary)		339
+nim	BrotliEncoderAttachPreparedDictionary	brotli/encode.html#BrotliEncoderAttachPreparedDictionary,ptr.BrotliEncoderState,ptr.BrotliEncoderPreparedDictionary	proc BrotliEncoderAttachPreparedDictionary(state: ptr BrotliEncoderState; dictionary: ptr BrotliEncoderPreparedDictionary): cint		342
+nim	BrotliEncoderMaxCompressedSize	brotli/encode.html#BrotliEncoderMaxCompressedSize,csize_t	proc BrotliEncoderMaxCompressedSize(inputSize: csize_t): csize_t		355
+nim	BrotliEncoderCompress	brotli/encode.html#BrotliEncoderCompress,cint,cint,BrotliEncoderMode,csize_t,ptr.UncheckedArray[uint8],ptr.csize_t,ptr.UncheckedArray[uint8]	proc BrotliEncoderCompress(quality: cint = BROTLI_DEFAULT_QUALITY;\n                      lgwin: cint = BROTLI_DEFAULT_WINDOW;\n                      mode: BrotliEncoderMode = BROTLI_DEFAULT_MODE;\n                      inputSize: csize_t;\n                      inputBuffer: ptr UncheckedArray[uint8];\n                      encodedSize: ptr csize_t;\n                      encodedBuffer: ptr UncheckedArray[uint8]): cint		369
+nim	BrotliEncoderCompressStream	brotli/encode.html#BrotliEncoderCompressStream,ptr.BrotliEncoderState,BrotliEncoderOperation,ptr.csize_t,ptr.ptr.uint8,ptr.csize_t,ptr.ptr.uint8,ptr.csize_t	proc BrotliEncoderCompressStream(state: ptr BrotliEncoderState;\n                            op: BrotliEncoderOperation;\n                            availableIn: ptr csize_t; nextIn: ptr ptr uint8;\n                            availableOut: ptr csize_t; nextOut: ptr ptr uint8;\n                            totalOut: ptr csize_t): cint		403
+nim	BrotliEncoderIsFinished	brotli/encode.html#BrotliEncoderIsFinished,ptr.BrotliEncoderState	proc BrotliEncoderIsFinished(state: ptr BrotliEncoderState): cint		475
+nim	BrotliEncoderHasMoreOutput	brotli/encode.html#BrotliEncoderHasMoreOutput,ptr.BrotliEncoderState	proc BrotliEncoderHasMoreOutput(state: ptr BrotliEncoderState): cint		486
+nim	BrotliEncoderTakeOutput	brotli/encode.html#BrotliEncoderTakeOutput,ptr.BrotliEncoderState,ptr.csize_t	proc BrotliEncoderTakeOutput(state: ptr BrotliEncoderState; size: ptr csize_t): ptr uint8		496
+nim	BrotliEncoderEstimatePeakMemoryUsage	brotli/encode.html#BrotliEncoderEstimatePeakMemoryUsage,cint,cint,csize_t	proc BrotliEncoderEstimatePeakMemoryUsage(quality: cint; lgwin: cint;\n                                     inputSize: csize_t): csize_t		528
+nim	BrotliEncoderGetPreparedDictionarySize	brotli/encode.html#BrotliEncoderGetPreparedDictionarySize,ptr.BrotliEncoderPreparedDictionary	proc BrotliEncoderGetPreparedDictionarySize(dictionary: ptr BrotliEncoderPreparedDictionary): csize_t		533
+nim	BrotliEncoderVersion	brotli/encode.html#BrotliEncoderVersion	proc BrotliEncoderVersion(): uint32		537

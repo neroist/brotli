@@ -1,0 +1,4 @@
+*.dynlib
+*.exe
+*.dll
+*.so

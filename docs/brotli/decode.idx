@@ -1,0 +1,59 @@
+nimTitle	decode	brotli/decode.html	module src/brotli/decode		0
+nim	useBrotliDecDll	brotli/decode.html#useBrotliDecDll	const useBrotliDecDll		5
+nim	BrotliDecoderState	brotli/decode.html#BrotliDecoderState	object BrotliDecoderState		29
+nim	BROTLI_DECODER_RESULT_ERROR	brotli/decode.html#BROTLI_DECODER_RESULT_ERROR	BrotliDecoderResult.BROTLI_DECODER_RESULT_ERROR		37
+nim	BROTLI_DECODER_RESULT_SUCCESS	brotli/decode.html#BROTLI_DECODER_RESULT_SUCCESS	BrotliDecoderResult.BROTLI_DECODER_RESULT_SUCCESS		37
+nim	BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT	brotli/decode.html#BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT	BrotliDecoderResult.BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT		37
+nim	BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT	brotli/decode.html#BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT	BrotliDecoderResult.BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT		37
+nim	BrotliDecoderResult	brotli/decode.html#BrotliDecoderResult	enum BrotliDecoderResult		37
+nim	BROTLI_DECODER_ERROR_UNREACHABLE	brotli/decode.html#BROTLI_DECODER_ERROR_UNREACHABLE	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_UNREACHABLE		55
+nim	BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES	brotli/decode.html#BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_ALLOC_BLOCK_TYPE_TREES		55
+nim	BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2	brotli/decode.html#BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_2		55
+nim	BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1	brotli/decode.html#BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_ALLOC_RING_BUFFER_1		55
+nim	BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP	brotli/decode.html#BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MAP		55
+nim	BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS	brotli/decode.html#BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_ALLOC_TREE_GROUPS		55
+nim	BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES	brotli/decode.html#BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_ALLOC_CONTEXT_MODES		55
+nim	BROTLI_DECODER_ERROR_INVALID_ARGUMENTS	brotli/decode.html#BROTLI_DECODER_ERROR_INVALID_ARGUMENTS	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_INVALID_ARGUMENTS		55
+nim	BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET	brotli/decode.html#BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_DICTIONARY_NOT_SET		55
+nim	BROTLI_DECODER_ERROR_COMPOUND_DICTIONARY	brotli/decode.html#BROTLI_DECODER_ERROR_COMPOUND_DICTIONARY	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_COMPOUND_DICTIONARY		55
+nim	BROTLI_DECODER_ERROR_FORMAT_DISTANCE	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_DISTANCE	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_DISTANCE		55
+nim	BROTLI_DECODER_ERROR_FORMAT_PADDING_2	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_PADDING_2	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_PADDING_2		55
+nim	BROTLI_DECODER_ERROR_FORMAT_PADDING_1	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_PADDING_1	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_PADDING_1		55
+nim	BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS		55
+nim	BROTLI_DECODER_ERROR_FORMAT_DICTIONARY	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_DICTIONARY	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_DICTIONARY		55
+nim	BROTLI_DECODER_ERROR_FORMAT_TRANSFORM	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_TRANSFORM	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_TRANSFORM		55
+nim	BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_2		55
+nim	BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_BLOCK_LENGTH_1		55
+nim	BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_CONTEXT_MAP_REPEAT		55
+nim	BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_HUFFMAN_SPACE		55
+nim	BROTLI_DECODER_ERROR_FORMAT_CL_SPACE	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_CL_SPACE	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_CL_SPACE		55
+nim	BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_SAME		55
+nim	BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_SIMPLE_HUFFMAN_ALPHABET		55
+nim	BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_META_NIBBLE		55
+nim	BROTLI_DECODER_ERROR_FORMAT_RESERVED	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_RESERVED	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_RESERVED		55
+nim	BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE	brotli/decode.html#BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE	BrotliDecoderErrorCode.BROTLI_DECODER_ERROR_FORMAT_EXUBERANT_NIBBLE		55
+nim	BROTLI_DECODER_NO_ERROR	brotli/decode.html#BROTLI_DECODER_NO_ERROR	BrotliDecoderErrorCode.BROTLI_DECODER_NO_ERROR		55
+nim	BROTLI_DECODER_SUCCESS	brotli/decode.html#BROTLI_DECODER_SUCCESS	BrotliDecoderErrorCode.BROTLI_DECODER_SUCCESS		55
+nim	BROTLI_DECODER_NEEDS_MORE_INPUT	brotli/decode.html#BROTLI_DECODER_NEEDS_MORE_INPUT	BrotliDecoderErrorCode.BROTLI_DECODER_NEEDS_MORE_INPUT		55
+nim	BROTLI_DECODER_NEEDS_MORE_OUTPUT	brotli/decode.html#BROTLI_DECODER_NEEDS_MORE_OUTPUT	BrotliDecoderErrorCode.BROTLI_DECODER_NEEDS_MORE_OUTPUT		55
+nim	BrotliDecoderErrorCode	brotli/decode.html#BrotliDecoderErrorCode	enum BrotliDecoderErrorCode		55
+nim	BROTLI_LAST_ERROR_CODE	brotli/decode.html#BROTLI_LAST_ERROR_CODE	const BROTLI_LAST_ERROR_CODE		94
+nim	BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION	brotli/decode.html#BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION	BrotliDecoderParameter.BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION		105
+nim	BROTLI_DECODER_PARAM_LARGE_WINDOW	brotli/decode.html#BROTLI_DECODER_PARAM_LARGE_WINDOW	BrotliDecoderParameter.BROTLI_DECODER_PARAM_LARGE_WINDOW		105
+nim	BrotliDecoderParameter	brotli/decode.html#BrotliDecoderParameter	enum BrotliDecoderParameter		105
+nim	BrotliDecoderSetParameter	brotli/decode.html#BrotliDecoderSetParameter,ptr.BrotliDecoderState,BrotliDecoderParameter,uint32	proc BrotliDecoderSetParameter(state: ptr BrotliDecoderState;\n                          param: BrotliDecoderParameter; value: uint32): cint		122
+nim	BrotliDecoderAttachDictionary	brotli/decode.html#BrotliDecoderAttachDictionary,ptr.BrotliDecoderState,BrotliSharedDictionaryType,csize_t,ptr.UncheckedArray[uint8]	proc BrotliDecoderAttachDictionary(state: ptr BrotliDecoderState;\n                              type: BrotliSharedDictionaryType;\n                              dataSize: csize_t; data: ptr UncheckedArray[uint8]): cint		135
+nim	BrotliDecoderCreateInstance	brotli/decode.html#BrotliDecoderCreateInstance,BrotliAllocFunc,BrotliFreeFunc,pointer	proc BrotliDecoderCreateInstance(allocFunc: BrotliAllocFunc = nil;\n                            freeFunc: BrotliFreeFunc = nil;\n                            opaque: pointer = nil): ptr BrotliDecoderState		158
+nim	BrotliDecoderDestroyInstance	brotli/decode.html#BrotliDecoderDestroyInstance,ptr.BrotliDecoderState	proc BrotliDecoderDestroyInstance(state: ptr BrotliDecoderState)		180
+nim	BrotliDecoderDecompress	brotli/decode.html#BrotliDecoderDecompress,csize_t,ptr.UncheckedArray[uint8],ptr.csize_t,ptr.UncheckedArray[uint8]	proc BrotliDecoderDecompress(encodedSize: csize_t;\n                        encodedBuffer: ptr UncheckedArray[uint8];\n                        decodedSize: ptr csize_t;\n                        decodedBuffer: ptr UncheckedArray[uint8]): BrotliDecoderResult		187
+nim	BrotliDecoderDecompressStream	brotli/decode.html#BrotliDecoderDecompressStream,ptr.BrotliDecoderState,ptr.csize_t,ptr.ptr.UncheckedArray[uint8],ptr.csize_t,ptr.ptr.UncheckedArray[uint8],ptr.csize_t	proc BrotliDecoderDecompressStream(state: ptr BrotliDecoderState;\n                              availableIn: ptr csize_t;\n                              nextIn: ptr ptr UncheckedArray[uint8];\n                              availableOut: ptr csize_t;\n                              nextOut: ptr ptr UncheckedArray[uint8];\n                              totalOut: ptr csize_t): BrotliDecoderResult		210
+nim	BrotliDecoderHasMoreOutput	brotli/decode.html#BrotliDecoderHasMoreOutput,ptr.BrotliDecoderState	proc BrotliDecoderHasMoreOutput(state: ptr BrotliDecoderState): cint		260
+nim	BrotliDecoderTakeOutput	brotli/decode.html#BrotliDecoderTakeOutput,ptr.BrotliDecoderState,ptr.csize_t	proc BrotliDecoderTakeOutput(state: ptr BrotliDecoderState; size: ptr csize_t): ptr UncheckedArray[\n    uint8]		270
+nim	BrotliDecoderIsUsed	brotli/decode.html#BrotliDecoderIsUsed,ptr.BrotliDecoderState	proc BrotliDecoderIsUsed(state: ptr BrotliDecoderState): cint		302
+nim	BrotliDecoderIsFinished	brotli/decode.html#BrotliDecoderIsFinished,ptr.BrotliDecoderState	proc BrotliDecoderIsFinished(state: ptr BrotliDecoderState): cint		315
+nim	BrotliDecoderGetErrorCode	brotli/decode.html#BrotliDecoderGetErrorCode,ptr.BrotliDecoderState	proc BrotliDecoderGetErrorCode(state: ptr BrotliDecoderState): BrotliDecoderErrorCode		326
+nim	BrotliDecoderErrorString	brotli/decode.html#BrotliDecoderErrorString,BrotliDecoderErrorCode	proc BrotliDecoderErrorString(c: BrotliDecoderErrorCode): cstring		339
+nim	BrotliDecoderVersion	brotli/decode.html#BrotliDecoderVersion	proc BrotliDecoderVersion(): uint32		344
+nim	BrotliDecoderMetadataStartFunc	brotli/decode.html#BrotliDecoderMetadataStartFunc	type BrotliDecoderMetadataStartFunc		362
+nim	BrotliDecoderMetadataChunkFunc	brotli/decode.html#BrotliDecoderMetadataChunkFunc	type BrotliDecoderMetadataChunkFunc		374
+nim	BrotliDecoderSetMetadataCallbacks	brotli/decode.html#BrotliDecoderSetMetadataCallbacks,ptr.BrotliDecoderState,BrotliDecoderMetadataStartFunc,BrotliDecoderMetadataChunkFunc,pointer	proc BrotliDecoderSetMetadataCallbacks(state: ptr BrotliDecoderState;\n                                  startFunc: BrotliDecoderMetadataStartFunc;\n                                  chunkFunc: BrotliDecoderMetadataChunkFunc;\n                                  opaque: pointer)		389

@@ -1,0 +1,5 @@
+nimTitle	types	brotli/types.html	module src/brotli/types		0
+nim	BROTLI_UINT32_MAX	brotli/types.html#BROTLI_UINT32_MAX	const BROTLI_UINT32_MAX		30
+nim	BROTLI_SIZE_MAX	brotli/types.html#BROTLI_SIZE_MAX	const BROTLI_SIZE_MAX		31
+nim	BrotliAllocFunc	brotli/types.html#BrotliAllocFunc	type BrotliAllocFunc		34
+nim	BrotliFreeFunc	brotli/types.html#BrotliFreeFunc	type BrotliFreeFunc		48
