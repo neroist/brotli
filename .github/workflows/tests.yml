@@ -1,0 +1,33 @@
+name: tests
+run-name: Run tests
+
+on: 
+  push:
+    branches:
+      - "main"
+    paths:
+      - "nimdoc.cfg"
+      - "brotli.nimble"
+
+      - "src/**"
+      - "tests/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Nim
+        uses: jiro4989/setup-nim-action@v1
+        with:
+          nim-version: stable
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run tests
+        run: nimble test
+        

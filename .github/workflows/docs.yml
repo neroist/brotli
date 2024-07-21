@@ -1,0 +1,44 @@
+name: generate-doc
+run-name: Generate documentation
+
+on: 
+  push:
+    branches:
+      - "main"
+    paths:
+      - "nimdoc.cfg"
+      - "brotli.nimble"
+
+      - "src/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+jobs:
+  generate-doc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Nim
+        uses: jiro4989/setup-nim-action@v1
+        with:
+          nim-version: stable
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate documentation
+        run: |
+          nimble docs
+          
+          cd docs
+          echo "<!DOCTYPE html><html><head><meta http-equiv='refresh' content='0; url=./brotli.html'></head></html>" > index.html
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          build_dir: docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
