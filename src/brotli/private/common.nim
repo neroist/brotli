@@ -1,4 +1,4 @@
-## Helper module to make sure csrc/common/*.c is only compiled once
+## Helper module to make sure `csrc/common/*.c` is only compiled once
 ## as compiling it twice causes issues
 
 when not declared(brotliPrivCommonCompiled):
