@@ -16,13 +16,13 @@ else:
   import std/os
   const currentSourceDir = currentSourcePath.parentDir()
 
-  {.passC: "-I" & currentSourceDir / "csrc/include".}
-  {.compile: ("./csrc/common/*.c", "$#.o").}
+  {.passC: "-I" & currentSourceDir / "csrc/include".}  
   {.compile: ("./csrc/enc/*.c", "$#.o").}
 
   {.pragma: brotliEnc.}
 
 import ./shared_dictionary
+import ./private/common
 import ./types
 
 const

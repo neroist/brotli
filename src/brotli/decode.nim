@@ -17,12 +17,12 @@ else:
   const currentSourceDir = currentSourcePath.parentDir()
 
   {.passC: "-I" & currentSourceDir / "csrc/include".}
-  {.compile: ("./csrc/common/*.c", "$#.o").}
   {.compile: ("./csrc/dec/*.c", "$#.o").}
 
   {.pragma: brotliDec.}
 
 import ./shared_dictionary
+import ./private/common
 import ./types
 
 type
