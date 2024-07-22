@@ -4,3 +4,5 @@
 *.exe
 *.dll
 *.so
+
+docs/
