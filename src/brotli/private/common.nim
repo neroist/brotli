@@ -9,5 +9,5 @@ when useStaticCompilation or defined(nimdoc):
     {.compile: ("./../csrc/common/*.c", "$#.o").}
 
   const brotliPrivCommonCompiled* = true
-    ## Marker indicating whether or not `common/*.c` has been compiled.
+    ## Marker indicating whether or not `csrc/common/*.c` has been compiled.
     ## The value doesn't matter, only the constant's declaration does.
