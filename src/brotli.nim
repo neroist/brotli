@@ -14,7 +14,7 @@ const
     32*MB, 32*MB, 32*MB, 32*MB, 64*MB, 64*MB, 128*MB, 128*MB,
     256*MB
   ]
-    ## According to the block sizes defined by defaultAllocationPlan, the whole
+    ## According to the block sizes defined by `defaultAllocationPlan`, the whole
     ## allocated size growth step is:
     ## 
     ## ```
@@ -85,14 +85,14 @@ proc compressBrotli*(src: pointer, len: int, mode: BrotliEncoderMode = BrotliMod
     raise newException(BrotliError, "Failed to compress input")
 
 proc compressBrotli*(src: string, mode: BrotliEncoderMode = BrotliModeText, quality: int = BROTLI_DEFAULT_QUALITY, lgwin: cint = BROTLI_DEFAULT_WINDOW): string {.raises: [BrotliError].} =
-  ## Compresses data from `src` and returns the Compressed data as a string.
+  ## Compresses data from `src` and returns the compressed data as a string.
   ## 
   ## See [proc compressBrotli(pointer, int, BrotliEncoderMode, int, int)] for
   ## descriptions of the other parameters
   compressBrotli(cstring src, src.len, mode, quality, lgwin)
 
 proc compressBrotli*(src: seq[byte], mode: BrotliEncoderMode = BrotliModeGeneric, quality: int = BROTLI_DEFAULT_QUALITY, lgwin: cint = BROTLI_DEFAULT_WINDOW): seq[byte] {.raises: [BrotliError].} =
-  ## Compresses data from `src` and returns the Compressed data as a string.
+  ## Compresses data from `src` and returns the compressed data as a `seq[byte]`.
   ## 
   ## See [proc compressBrotli(pointer, int, BrotliEncoderMode, int, int)] for
   ## descriptions of the other parameters
