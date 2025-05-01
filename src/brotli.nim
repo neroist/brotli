@@ -171,7 +171,7 @@ proc decompressBrotli*(src: pointer, len: int, allocationPlan: openArray[int] = 
         # --- the decoder needs more memory for output
 
         # increment plan step for allocation
-        if allocPlanStep < allocationPlan.len:
+        if allocPlanStep < (allocationPlan.len - 1):
           inc allocPlanStep
 
         # increase the result capacity
