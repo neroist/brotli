@@ -125,7 +125,6 @@ proc decompressBrotli*(src: pointer, len: int, allocationPlan: openArray[int] = 
     let setResult = BrotliDecoderSetParameter(state, param, 1)
 
     if setResult != 1:
-      BrotliDecoderDestroyInstance(state)
       raise newException(BrotliError, "Could not set parameter " & $param)
 
   var
@@ -163,7 +162,6 @@ proc decompressBrotli*(src: pointer, len: int, allocationPlan: openArray[int] = 
 
         # since we're stopping execution of the function here (`raise`),
         # we need to remember to deallocate the decoder state
-        BrotliDecoderDestroyInstance(state)
 
         let err = BrotliDecoderGetErrorCode(state)
         raise newException(BrotliError, "Error decompressing input: " & $BrotliDecoderErrorString(err))
@@ -176,21 +174,22 @@ proc decompressBrotli*(src: pointer, len: int, allocationPlan: openArray[int] = 
 
         # increase the result capacity
         result.setLen(result.len + allocationPlan[allocPlanStep])
-        
+
         # since we have more space, we need to let the decompresser know that
         # so we increment the `availableOut` variable, which indicates the
         # remaining size of output buffer
         inc availableOut, allocationPlan[allocPlanStep]
-        
+
         # and update the `nextOut` cursor, so the decompresser knows where to look
         nextOut = cast[uint](addr result[result.len - allocationPlan[allocPlanStep]])
       of BROTLI_DECODER_RESULT_NEEDS_MORE_INPUT:
         # --- decoder needs more input
-        
-        # ...but the `src` pointer isn't ours
-        # throw an error in this case
 
-        BrotliDecoderDestroyInstance(state)
+        # see #1 
+        if result.len > 0:
+          result.setLen(totalOut)
+          break
+
         raise newException(BrotliError, "Error decompressing input: Needs more input data, or `len` parameter inaccurate")
 
 proc decompressBrotli*(src: string, allocationPlan: openArray[int] = defaultAllocationPlan, stateParams: set[BrotliDecoderParameter] = {}): string {.raises: [BrotliError].} =
