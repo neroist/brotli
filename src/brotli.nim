@@ -160,9 +160,6 @@ proc decompressBrotli*(src: pointer, len: int, allocationPlan: openArray[int] = 
       of BROTLI_DECODER_RESULT_ERROR:
         # --- some error, throw an exception
 
-        # since we're stopping execution of the function here (`raise`),
-        # we need to remember to deallocate the decoder state
-
         let err = BrotliDecoderGetErrorCode(state)
         raise newException(BrotliError, "Error decompressing input: " & $BrotliDecoderErrorString(err))
       of BROTLI_DECODER_RESULT_NEEDS_MORE_OUTPUT:
